@@ -1,0 +1,124 @@
+
+         .circle{
+  background: #E7E7E7;
+  padding: 25px;
+  text-align: center;
+  height: 150px;
+  width: 150px;
+  border: 8px solid #F2F2F2;
+    
+    transition: all 0.5s;
+  -moz-transition: all 0.5s; /* Firefox 4 */
+  -webkit-transition: all 0.5s; /* Safari and Chrome */
+  -o-transition: all 0.5s; /* Opera */
+ 
+}
+.circle h4{
+  margin: 0;
+  padding: 0;
+}
+.circle p{}
+.circle span{}
+.circle span.icon{
+}
+.circle span.icon i{
+  font-size: 14px;
+}
+.circle span.price-large{
+  font-size: 16px
+}
+.price-small{
+  font-size: 14px 
+}
+
+.c1:hover{
+  background: #39b3d7;
+  color: #ffffff!important;
+}
+.c1 .blue{
+  color: #39b3d7;
+}
+.c1:hover .blue{
+  color: #ffffff!important;
+}
+
+.c2:hover{
+  background: #ed9c28;
+  color: #ffffff!important;
+}
+.c2 .orange{
+  color: #ed9c28;
+}
+.c2:hover .orange{
+  color: #ffffff!important;
+}
+
+.c3:hover{
+  background: #47a447;
+  color: #ffffff!important;
+}
+.c3 .green{
+  color: #47a447;
+}
+.c3:hover .green{
+  color: #ffffff!important;
+}
+
+.c4:hover{
+  background: #d2322d;
+  color: #ffffff!important;
+}
+.c4 .red{
+  color: #d2322d;
+}
+.c4:hover .red{
+  color: #ffffff!important;
+}
+ 
+.c5:hover{
+  background: #9585BF;
+  color: #ffffff!important;
+}
+.c5 .purple{
+  color: #9585BF;
+}
+.c5:hover .purple{
+  color: #ffffff!important;
+}
+ 
+.c6:hover{
+  background: #A0A0A0;
+  color: #ffffff!important;
+}
+.c6 .gray{
+  color: #A0A0A0;
+}
+.c6:hover .gray{
+  color: #ffffff!important;
+}
+ 
+.c7:hover{
+  background: #D6487E;
+  color: #ffffff!important;
+}
+.c7 .pink{
+  color: #D6487E;
+}
+.c7:hover .pink{
+  color: #ffffff!important;
+}
+
+.c8:hover{
+  background: #555555;
+  color: #ffffff!important;
+}
+.c8 .inverse{
+  color: #555555;
+}
+.c8:hover .inverse{
+  color: #ffffff!important;
+}
+.btn {
+    border: 0px;
+}
+        

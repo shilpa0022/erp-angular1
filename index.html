@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myerp">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta charset="utf-8" />
+		<title>CannEasy ERP</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+		<!-- bootstrap & fontawesome -->
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+		<!-- page specific plugin styles -->
+
+		<!-- text fonts -->
+		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+
+		<!-- ace styles -->
+		<link rel="stylesheet" href="assets/css/erp.min.css" />
+		<link rel="stylesheet" href="assets/css/index.css"/>
+
+		<!--[if lte IE 9]>
+			<link rel="stylesheet" href="assets/css/erp-part2.min.css" class="ace-main-stylesheet" />
+		<![endif]-->
+		<link rel="stylesheet" href="assets/css/erp-skins.min.css" />
+		<link rel="stylesheet" href="assets/css/erp-rtl.min.css" />
+
+		<!--[if lte IE 9]>
+		  <link rel="stylesheet" href="assets/css/erp-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+		<script src="assets/js/erp-extra.min.js"></script>
+
+		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body class="no-skin">
+		<div id="navbar" class="navbar navbar-default ace-save-state">
+			<div class="navbar-container ace-save-state" id="navbar-container">
+				<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+					<span class="sr-only">Toggle sidebar</span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+
+					<span class="icon-bar"></span>
+				</button>
+
+				<div class="navbar-header pull-left">
+					<a href="index.html" class="navbar-brand">
+						<small>
+							<i class="fa fa-leaf"></i>
+                            CannEasy
+						</small>
+					</a>
+				</div>
+
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						
+
+						
+
+						<li class="green dropdown-modal">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+								<span class="badge badge-success">5</span>
+							</a>
+
+							<ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="ace-icon fa fa-envelope-o"></i>
+									5 Messages
+								</li>
+
+								<li class="dropdown-content">
+									<ul class="dropdown-menu dropdown-navbar">
+										
+                                        <li>
+                                            <a href="#" class="clearfix">
+
+                                                <span class="msg-body">
+                                                    <span class="msg-title">
+
+                                                        New Purchase
+                                                    </span>
+
+                                                    <span class="msg-time">
+                                                        <i class="ace-icon fa fa-clock-o"></i>
+                                                        <span>01:00 pm</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="clearfix">
+
+                                                <span class="msg-body">
+                                                    <span class="msg-title">
+
+                                                        Sale Increased
+                                                    </span>
+
+                                                    <span class="msg-time">
+                                                        <i class="ace-icon fa fa-clock-o"></i>
+                                                        <span>11:09 am</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+
+										<li>
+											<a href="#" class="clearfix">
+												
+												<span class="msg-body">
+													<span class="msg-title">
+														
+														New Product Added
+													</span>
+
+													<span class="msg-time">
+														<i class="ace-icon fa fa-clock-o"></i>
+														<span>10:09 am</span>
+													</span>
+												</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="dropdown-footer">
+									<a href="">
+										See all messages
+										<i class="ace-icon fa fa-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="light-blue dropdown-modal">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+								<span class="user-info">
+									<small>Welcome,</small>
+									Raja
+								</span>
+
+								<i class="ace-icon fa fa-caret-down"></i>
+							</a>
+
+							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="ace-icon fa fa-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="">
+										<i class="ace-icon fa fa-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="#">
+										<i class="ace-icon fa fa-power-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div><!-- /.navbar-container -->
+		</div>
+
+		<div class="main-container ace-save-state" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.loadState('main-container')}catch(e){}
+			</script>
+
+			<div id="sidebar" class="sidebar                  responsive                    ace-save-state">
+				<script type="text/javascript">
+					try{ace.settings.loadState('sidebar')}catch(e){}
+				</script>
+
+				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+					<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+						<button class="btn btn-success">
+							<i class="ace-icon fa fa-signal"></i>
+						</button>
+
+						<button class="btn btn-info">
+							<i class="ace-icon fa fa-pencil"></i>
+						</button>
+
+						<button class="btn btn-warning">
+							<i class="ace-icon fa fa-users"></i>
+						</button>
+
+						<button class="btn btn-danger">
+							<i class="ace-icon fa fa-cogs"></i>
+						</button>
+					</div>
+
+					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+						<span class="btn btn-success"></span>
+
+						<span class="btn btn-info"></span>
+
+						<span class="btn btn-warning"></span>
+
+						<span class="btn btn-danger"></span>
+					</div>
+				</div><!-- /.sidebar-shortcuts -->
+
+				<ul class="nav nav-list">
+					<li class="active">
+						<a href="index.html">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text"> Dashboard </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+
+					
+
+					<li class="">
+						<a href="propogation.html" class="dropdown-toggle">
+							<i class="menu-icon fa fa-list"></i>
+							<span class="menu-text"> Production </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						 </a>
+
+						   <b class="arrow"></b>
+
+						  <ul class="submenu">
+							<li class="">
+								<a href="propogation.html" class="dropdown-toggle">
+									<i class="menu-icon fa fa-list"></i>
+										<span class="menu-text"> propogation </span>
+										<b class="arrow fa fa-angle-down"></b>
+								</a>
+
+								<b class="arrow"></b>
+						     <ul class="submenu">
+                              <li class="">
+                                 <a href="#seed">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Seed
+                                  </a>
+
+                                 <b class="arrow"></b>
+                               </li>
+
+                              <li class="">
+                                  <a href="#clone">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Clone
+                                  </a>
+
+                                  <b class="arrow"></b>
+                              </li>
+                              <li class="">
+                                   <a href="#mother">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Mother Plant
+                                   </a>
+
+                                <b class="arrow"></b>
+                              </li>
+						     </ul>
+							</li>
+						</ul>
+						
+						<ul class="submenu">
+							<li class="">
+								<a href="" class="dropdown-toggle">
+									<i class="menu-icon fa fa-list"></i>
+										<span class="menu-text"> production </span>
+										<b class="arrow fa fa-angle-down"></b>
+								</a>
+
+								<b class="arrow"></b>
+						     <ul class="submenu">
+                              <li class="">
+                                <a href="#plant">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Plant Growth
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="#harvesting">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Harvesting
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+						     </ul>
+							</li>
+
+							
+						</ul>
+						<ul class="submenu">
+							<li class="">
+								<a href="" class="dropdown-toggle">
+									<i class="menu-icon fa fa-list"></i>
+										<span class="menu-text"> Preparation </span>
+										<b class="arrow fa fa-angle-down"></b>
+								</a>
+
+								<b class="arrow"></b>
+						     <ul class="submenu">
+                              <li class="">
+                                <a href="#cut_mantain">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Cut & Manicure
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="#drying">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Drying
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="#curing_storage">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Curing & Storage
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+						     </ul>
+							</li>
+							 <li class="">
+                        <a href="">
+                            <i class="menu-icon fa fa-picture-o"></i>
+                            <span class="menu-text"> Sample Management </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="">
+                            <i class="menu-icon fa fa-picture-o"></i>
+                            <span class="menu-text"> Laboratory Testing </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="">
+                            <i class="menu-icon fa fa-picture-o"></i>
+                            <span class="menu-text"> Tasting </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+							
+						</ul>
+
+					</li>
+
+					<li class="">
+						<a href="production_order.html" class="dropdown-toggle">
+							<i class="menu-icon fa fa-pencil-square-o"></i>
+							<span class="menu-text"> Inventory </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="#production_order">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Production Order
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+
+                            <li class="">
+                                <a href="#production_status">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Production Status
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="#bill_of_material">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                     Bill of Materials
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="#grow_location">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                   Grow Location
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="#plant_inventory">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Plant Inventory
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="#storage_location">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Storage Locations
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="#feed_inventory">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                  Feed Inventory
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                        </ul>
+					</li>
+
+					<li class="">
+						<a href="" class="dropdown-toggle">
+							<i class="menu-icon fa fa-list-alt"></i>
+							<span class="menu-text"> Sales </span>
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+						<ul class="submenu">
+							<li class="">
+                                <a href="#custome_database">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    customer database
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="#sales_orderMaterial_supplies">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Sales Order
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a href="#sales_order_report">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Sales Order Report
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="" class="dropdown-toggle">
+							<i class="menu-icon fa fa-calendar"></i>
+
+							<span class="menu-text">
+								Purchase
+
+								
+							</span>
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+						<ul class="submenu">
+							 <li class="active">
+                        <a href="#supplier_database">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            <span class="menu-text"> Supplier Database </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+							 <li class="">
+                        <a href="#purchase_orderMaterial_receipt">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            <span class="menu-text"> Purchase Order </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    
+                    <li class="">
+                        <a href="#purchase_report">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            <span class="menu-text"> Purchase Receipt </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+				</ul>
+
+						
+					</li>
+
+					<li class="" >
+						<a href="gallery.html" class="dropdown-toggle">
+							<i class="menu-icon fa fa-picture-o"></i>
+							<span class="menu-text"> Finance </span>
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+						<ul class="submenu">
+							<li class="active">
+                        <a href="#purchase_payment">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            <span class="menu-text"> Purchase Payments </span>
+
+                            
+                        </a>
+
+                        <b class="arrow"></b>
+
+                        
+                    </li>
+
+                    <li class="">
+                        <a href="#customer_payment">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            <span class="menu-text"> Customer Payments </span>
+
+
+                        </a>
+
+                        <b class="arrow"></b>
+
+
+                    </li>
+
+                    <li class="">
+                        <a href="#customer_invoice">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            <span class="menu-text"> Customer Invoice </span>
+
+
+                        </a>
+
+                        <b class="arrow"></b>
+
+
+                    </li>
+
+                    <li class="">
+                        <a href="#supplier_invoice">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            <span class="menu-text"> Supplier Invoice </span>
+
+
+                        </a>
+
+                        <b class="arrow"></b>
+
+
+                    </li>
+
+                    <li class="">
+                        <a href="#supplier_invoice">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            <span class="menu-text"> Capital Purchase </span>
+
+
+                        </a>
+
+                        <b class="arrow"></b>
+
+
+                    </li>
+						</ul>
+					</li>
+
+					<li class="">
+						<a href="#" class="dropdown-toggle">
+							<i class="menu-icon fa fa-tag"></i>
+							<span class="menu-text"> Strain Database </span>
+
+							<b class="arrow fa fa-angle-down"></b>
+						</a>
+
+						<b class="arrow"></b>
+
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Sub Menu 1
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+
+                            <li class="">
+                                <a href="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Sub Menu 2
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+					</li>
+
+                    <li class="">
+                        <a href="">
+                            <i class="menu-icon fa fa-picture-o"></i>
+                            <span class="menu-text"> IoT Integration </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="">
+                            <i class="menu-icon fa fa-picture-o"></i>
+                            <span class="menu-text"> New Products </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+
+                    <li class="">
+                        <a href="">
+                            <i class="menu-icon fa fa-picture-o"></i>
+                            <span class="menu-text"> Compliance </span>
+                        </a>
+
+                        <b class="arrow"></b>
+                    </li>
+					
+				</ul><!-- /.nav-list -->
+
+				<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+				</div>
+			</div>
+
+			<div class="main-content">
+				<div class="main-content-inner">
+					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
+						<ul class="breadcrumb">
+							<li>
+								<i class="ace-icon fa fa-home home-icon"></i>
+								<a href="blank2.html">Home</a>
+							</li>
+
+							
+							<li class="active">
+                            Dashboard</li>
+						</ul><!-- /.breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="ace-icon fa fa-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- /.nav-search -->
+					</div>
+
+					
+			<div ng-view></div>
+		
+
+					
+				</div>
+			</div><!-- /.main-content -->
+
+			<div class="footer">
+				<div class="footer-inner">
+					<div class="footer-content">
+						<span class="bigger-120">
+							<span class="blue bolder">Cann</span>
+							Easy &copy; 2018-2019
+						</span>
+
+						&nbsp; &nbsp;
+						<span class="action-buttons">
+							<a href="#">
+								<i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+							</a>
+
+							<a href="#">
+								<i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+							</a>
+
+							<a href="#">
+								<i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+							</a>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+
+		
+
+		<!-- basic scripts -->
+        
+		<!--[if !IE]> -->
+		<script src="assets/js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="assets/js/index.js"></script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script src="assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+        <!--[if lte IE 8]>
+      <script src="assets/js/excanvas.min.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.1/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.3.0-rc.1/angular-route.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+        <script src="assets/js/jquery-ui.custom.min.js"></script>
+        <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+        <script src="assets/js/jquery.easypiechart.min.js"></script>
+        <script src="assets/js/jquery.sparkline.index.min.js"></script>
+        <script src="assets/js/jquery.flot.min.js"></script>
+        <script src="assets/js/jquery.flot.pie.min.js"></script>
+        <script src="assets/js/jquery.flot.resize.min.js"></script>
+
+
+		<!-- ace scripts -->
+		<script src="assets/js/erp-elements.min.js"></script>
+		<script src="assets/js/erp.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+        
+        
+        
+
+	</body>
+</html>
