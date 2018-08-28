@@ -1,5 +1,8 @@
-angular.module('myerp', ['ngRoute']).
-    config(function ($routeProvider) {
+ var app = angular.module('myerp', ['ngRoute']);
+
+var baseURI = "http://54.190.192.25:8000/";
+ 
+    app.config(function ($routeProvider) {
         $routeProvider.
             when('/dashbord', 
                 {
@@ -106,7 +109,7 @@ angular.module('myerp', ['ngRoute']).
             when('/purchase_orderMaterial_receipt',
              {
                 templateUrl: 'views/Purchase/purchase_orderMaterial_receipt.html',
-                 controller: 'purordmetCtrl'
+                 controller: 'prdordCtrl'
              }).
             when('/purchase_report',
              {
@@ -141,9 +144,7 @@ angular.module('myerp', ['ngRoute']).
    .controller('dashbordCtrl', function ($scope) {
         
     })
-    .controller('seedCtrl', function ($scope) {
-        
-    })
+   
     .controller('cloneCtrl', function ($scope) {
        
     })
