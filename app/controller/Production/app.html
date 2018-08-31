@@ -1,0 +1,249 @@
+<html ng-app="task">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.angularjs.org/1.2.25/angular.js"></script>
+    <script type="text/javascript" src="task.js"></script>
+</head>
+
+<body ng-controller="AppController">
+    <br/>
+    <div class="container">
+        <div class="row well">
+            <div class="col-sm-2">
+                <div class="form-group">
+                  <input type="text" class="form-control" ng-model="documentnumber" placeholder="Document number">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <select class="form-control" ng-model="documentname" ng-options="documentname for documentname in documentnames">
+                    <option value="" selected disabled hidden>Document name</option>
+                </select>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='date' class="form-control" ng-model="date" />
+                        <!-- <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span> -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="referencename" placeholder="reference name">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="referencenumber" placeholder="reference number">
+                </div>
+            </div>
+        </div>
+        
+        <br/>
+        <div class="row well" ng-repeat="value in array track by $index">
+            <div class="col-sm-2" style="width:120px">
+                <select class="form-control" ng-model="value.productname" ng-options="product for product in products">
+                    <option value="" selected disabled hidden>Product</option>
+                </select>
+            </div>
+            <div class="col-sm-2" style="margin-left: 10px;">
+                <input type="text" class="form-control" ng-model="value.description" placeholder="Description">
+            </div>
+            <div class="col-sm-1" style="width:120px">
+                <input type="number" class="form-control" ng-model="value.quantity" placeholder="Quantity" ng-blur="calculate(value,$index)">
+            </div>
+            <div class="col-sm-1" style="width:120px">
+                <input type="number" class="form-control" ng-model="value.rate" placeholder="Rate" ng-blur="calculate(value,$index)">
+            </div>
+            <div class="col-sm-1" style="width:100px">
+                <input type="number" class="form-control" ng-model="value.tax" placeholder="Tax" ng-blur="calculate(value,$index)">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" ng-model="value.taxvalue" placeholder="Tax value">
+            </div>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" ng-model="value.total" placeholder="Amount">
+            </div>
+            <div class="col-sm-1">
+                <button class="btn btn-primary" style="margin-top: 2px;" ng-click="deleterow($index)"><span class="glyphicon glyphicon-trash"></span></button>
+            </div>
+        </div>
+        <div class="row">
+            <button class="btn btn-primary" style="float: right;margin-right: 30px" ng-click="addrow()"></button>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-2" style="float: right">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="totalAmountData" placeholder="Total amount">
+                </div>
+            </div>
+            <div class="col-sm-2" style="float: right">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="totalTaxData" placeholder="Total tax">
+                </div>
+            </div>
+            <div class="col-sm-2" style="float: right">
+                <div class="form-group">
+                    <input type="text" class="form-control" ng-model="totalRateData" placeholder="Total rate">
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <center>
+                <button class="btn btn-primary btn-lg" ng-click="submit()">Submit</button>
+            </center>
+        </div>
+        <br/>
+<div class="row" ng-if="submitValue" style="border:1px solid black">
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+                        <th>Document number</th>
+                        <th>Document name</th>
+                        <th>Date</th>
+                        <th>Reference name</th>
+                        <th>Reference number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{documentnumber}}</td>
+                        <td>{{documentname}}</td>
+                        <td>{{date}}</td>
+                        <td>{{referencename}}</td>
+                        <td>{{referencenumber}}</td>
+                    </tr>
+                </tbody>
+                <br/>
+            </table>
+            <table class="table table-stripped">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Rate</th>
+                        <th>Tax</th>
+                        <th>Tax value</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="value in array">
+                        <td>{{value.productname}}</td>
+                        <td>{{value.description}}</td>
+                        <td>{{value.quantity}}</td>
+                        <td>{{value.rate}}</td>
+                        <td>{{value.tax}}</td>
+                        <td>{{value.taxvalue}}</td>
+                        <td>{{value.total}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="float: right;font-weight:bold"><span>Total rate:{{totalRateData}}</span>&nbsp;&nbsp;<span>Total tax:{{totalTaxData}}</span>&nbsp;&nbsp;<span>Total amount:{{totalAmountData}}</span></p>
+        </div>
+        {{allRowDataCalculation|json}}
+    </div>
+    <br/><br/>
+</body>
+
+</html>
+.....................................................................
+
+      angular
+    .module('task', [])
+
+    .controller('AppController', ['$scope', '$log', function($scope, $log) {
+
+        $scope.array = [];
+        $scope.documentnames = ['name 1', 'name 2', 'name 3', 'name 4'];
+        $scope.products = ['product 1', 'product 2', 'product 3', 'product 4'];
+
+
+        /******* add a new row code start *********/
+        $scope.addrow = function() {
+            var data = {
+                'productname': '',
+                'description': '',
+                'quantity': '',
+                'rate': '',
+                'tax': '',
+                'taxvalue': '',
+                'total': ''
+            }
+            $scope.array.push(data);
+        }
+        /******* add a new row code end *********/
+
+        /*******  delete a specific row code start *********/
+        $scope.deleterow = function(index) {
+            $scope.array.splice(index, 1);
+            $scope.allRowDataCalculation(); // to calculate total amount after deleting a row
+        }
+        /*******  delete a specific row code end *********/
+
+        /*******  calculate total amount and tax code start  *********/
+        $scope.calculate = function(data, index) {
+            $scope.rowCalculation(data, index);
+            $scope.allRowDataCalculation();
+        }
+        /*******  calculate total amount and tax code end  *********/
+
+        /*******  calculating total amount and tax of single row code start  *********/
+        $scope.rowCalculation = function(data, index) {
+            if (data.quantity != "" && data.rate != "" && data.tax != "") {
+
+                $scope.totalItemValue = data.quantity * data.rate;
+                $scope.taxData = ($scope.totalItemValue *data.tax)/ 100; // tax calculate
+                $scope.totalAmount = $scope.totalItemValue + $scope.taxData;
+
+                $scope.value = {
+                    'productname': data.productname,
+                    'description': data.description,
+                    'quantity': data.quantity,
+                    'rate': data.rate,
+                    'tax': data.tax,
+                    'taxvalue': $scope.taxData,
+                    'total': $scope.totalAmount
+                }
+                $scope.array.splice(index, 1);
+                $scope.array.splice(index, 0, $scope.value);
+            }
+        }
+        /*******  calculating total amount and tax of single row code end  *********/
+
+        /*******  calculating total amount and tax of all row code start  *********/
+        $scope.allRowDataCalculation = function() {
+            if ($scope.array.length > 0) {
+                angular.forEach($scope.array, function(value, key) {
+                    if (key == 0) {
+                        $scope.totalRateData = value.rate;
+                        $scope.totalTaxData = value.taxvalue;
+                        $scope.totalAmountData = value.total;
+                    } else {
+                        $scope.totalRateData += value.rate;
+                        $scope.totalTaxData += value.taxvalue;
+                        $scope.totalAmountData += value.total;
+                    }
+                });
+            } else { // after deleting all rows  resetting total amount value 
+                $scope.totalRateData = '';
+                $scope.totalTaxData = '';
+                $scope.totalAmountData = '';
+            }
+        }
+        /*******  calculating total amount and tax of all row code end  *********/
+
+        /*******  submitting all data code start  *********/
+        $scope.submit = function() {
+            $scope.submitValue = true;
+        }
+        /*******  submitting all data code end  *********/
+
+    }])

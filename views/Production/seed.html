@@ -7,9 +7,11 @@
         Seed
         </small>
         </h1>
-        </div><!-- /.page-header -->
-        <div class="row">
-            <div class="col-xs-12"> <!-- PAGE CONTENT BEGINS -->
+    </div>
+    <!-- /.page-header -->
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="tabbable">
@@ -34,7 +36,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Id: </label>
                                                 <div class="col-sm-7">
-                                                    <input id="form-field-1" placeholder="Username" ng-model="name" class="col-xs-12 col-sm-12" type="text">
+                                                    <input id="form-field-1" placeholder="Username" ng-model="data.sourceTypeId" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -42,7 +44,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Type: </label>
                                                 <div class="col-sm-7">
-                                                    <input id="form-field-1" placeholder="Username" ng-model="" class="col-xs-12 col-sm-12" type="text">
+                                                    <input id="form-field-1" placeholder="Username"  ng-model="data.type"  class="col-xs-12 col-sm-12" type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -50,7 +52,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Current Status: </label>
                                                 <div class="col-sm-7">
-                                                    <input id="form-field-1" placeholder="Username" ng-model="" class="col-xs-12 col-sm-12" type="text">
+                                                    <input id="form-field-1" placeholder="Username"  class="col-xs-12 col-sm-12" type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -58,7 +60,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Name: </label>
                                                 <div class="col-sm-7">
-                                                    <input id="form-field-1" placeholder="Username"  ng-model="" class="col-xs-12 col-sm-12" type="text">
+                                                    <input id="form-field-1" placeholder="Username" ng-model="data.name"  class="col-xs-12 col-sm-12" type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -66,7 +68,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Source: </label>
                                                 <div class="col-sm-7">
-                                                    <input id="form-field-1" placeholder="Username"  ng-model="name" class="col-xs-12 col-sm-12" type="text">
+                                                    <input id="form-field-1" placeholder="Username" ng-model="data.source" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -74,7 +76,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Group Id: </label>
                                                 <div class="col-sm-7">
-                                                    <input id="form-field-1" placeholder="Username"  ng-model="name" class="col-xs-12 col-sm-12" type="text">
+                                                    <input id="form-field-1" placeholder="Username"  class="col-xs-12 col-sm-12" type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -82,7 +84,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Location: </label>
                                                 <div class="col-sm-7">
-                                                    <input id="form-field-1" placeholder="Username"  ng-model="name" class="col-xs-12 col-sm-12" type="text">
+                                                    <input id="form-field-1" placeholder="Username" ng-model="data.location" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -90,7 +92,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Estimated Yield: </label>
                                                 <div class="col-sm-7">
-                                                    <input id="form-field-1" placeholder="Username"  ng-model="name" class="col-xs-12 col-sm-12" type="text">
+                                                    <input id="form-field-1" placeholder="Username" ng-model="data.estimatedYield" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -98,7 +100,7 @@
                                             <div class="form-group">
                                                 <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Sowing Date: </label>
                                                 <div class="col-sm-7">
-                                                    <input id="form-field-1" placeholder="Username"  ng-model="name" class="col-xs-12 col-sm-12" type="text">
+                                                    <input id="form-field-1" placeholder="Username" ng-model="data.startDate" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
                                             </div>
                                         </div>
@@ -106,26 +108,24 @@
                                             <div class="form-group">
                                                 <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Next Stage Date: </label>
                                                 <div class="col-sm-7">
-                                                    <input id="form-field-1" placeholder="Username"  ng-model="name" class="col-xs-12 col-sm-12" type="text">
+                                                    <input id="form-field-1" placeholder="Username" ng-model="data.nextStageDate" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-md-4 col-xs-12">
                                             <div class="form-group">
-                                                <label class="col-sm-5 control-label no-padding-right"  ng-model="name" for="form-field-1"> Next Stage: </label>
+                                                <label class="col-sm-5 control-label no-padding-right"  for="form-field-1"> Next Stage: </label>
                                                 <div class="col-sm-7">
-                                                    <select class="form-control" id="form-field-select-1">
-                                                        <option value=""></option>
-                                                        <option value="AL">Alabama</option>
-                                                        <option value="AK">Alaska</option>
+                                                    <select class="form-control" id="form-field-select-1" ng-model="data.selectStage" ng-options="stage for stage in growingStage"  >
+                                                       
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=" col-md-12 text-right">
                                             <button class="btn btn-sm btn-primary" ng-click="add()">Add</button>
-                                            <button class="btn btn-sm btn-primary" ng-click="edit()" >Edit/Modify</button>
-                                            <button class="btn btn-sm btn-primary"ng-click="copy()" >Copy</button>
+                                            <button class="btn btn-sm btn-primary" ng-click="edit()">Edit/Modify</button>
+                                            <button class="btn btn-sm btn-primary" ng-click="copy()">Copy</button>
                                         </div>
                                     </form>
                                     <div style="clear: both;">&nbsp;</div>
@@ -165,10 +165,7 @@
                                                                 Presoak Seed
                                                             </td>
                                                             <td>
-                                                                
                                                                 <span class="label label-white middle">12/04/2017</span>
-                                                                
-                                                                
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -263,447 +260,456 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                                </div><!-- /.widget-main -->
-                                                </div><!-- /.widget-body -->
+                                            </div>
+                                            <!-- /.widget-main -->
+                                        </div>
+                                        <!-- /.widget-body -->
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                        <div id="profile4" class="tab-pane">
+                            <p>
+                                <div class="row">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Id: </label>
+                                                <div class="col-sm-7">
+                                                    <input id="form-field-1"  placeholder="Username" ng-model="data.sourceTypeId" class="col-xs-12 col-sm-12" type="text">
+                                                </div>
                                             </div>
                                         </div>
-                                    </p>
-                                </div>
-                                <div id="profile4" class="tab-pane">
-                                    <p>
-                                        <div class="row">
-                                            <form class="form-horizontal" role="form">
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Id: </label>
-                                                        <div class="col-sm-7">
-                                                            <input id="form-field-1"  ng-model="name" placeholder="Username" class="col-xs-12 col-sm-12" type="text">
-                                                        </div>
-                                                    </div>
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Type: </label>
+                                                <div class="col-sm-7">
+                                                    <input id="form-field-1"  placeholder="Username"   ng-model="data.type" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Type: </label>
-                                                        <div class="col-sm-7">
-                                                            <input id="form-field-1"  ng-model="name" placeholder="Username" class="col-xs-12 col-sm-12" type="text">
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Current Status: </label>
+                                                <div class="col-sm-7">
+                                                    <input id="form-field-1"  placeholder="Username" ng-model="data.currentStatus" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Current Status: </label>
-                                                        <div class="col-sm-7">
-                                                            <input id="form-field-1"  ng-model="name" placeholder="Username" class="col-xs-12 col-sm-12" type="text">
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Name: </label>
+                                                <div class="col-sm-7">
+                                                    <input id="form-field-1"  placeholder="Username" ng-model="data.name" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Name: </label>
-                                                        <div class="col-sm-7">
-                                                            <input id="form-field-1"  ng-model="name" placeholder="Username" class="col-xs-12 col-sm-12" type="text">
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Source: </label>
+                                                <div class="col-sm-7">
+                                                    <input id="form-field-1"  placeholder="Username" ng-model="data.source"  class="col-xs-12 col-sm-12" type="text">{{data.source}}
                                                 </div>
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Source: </label>
-                                                        <div class="col-sm-7">
-                                                            <input id="form-field-1"  ng-model="name" placeholder="Username" class="col-xs-12 col-sm-12" type="text">
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Group Id: </label>
+                                                <div class="col-sm-7">
+                                                    <input id="form-field-1"  placeholder="Username" ng-model="data.seedGroupId" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Group Id: </label>
-                                                        <div class="col-sm-7">
-                                                            <input id="form-field-1"  ng-model="name" placeholder="Username" class="col-xs-12 col-sm-12" type="text">
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Location: </label>
+                                                <div class="col-sm-7">
+                                                    <input id="form-field-1"  placeholder="Username"  ng-model="data.location" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Location: </label>
-                                                        <div class="col-sm-7">
-                                                            <input id="form-field-1"  ng-model="name" placeholder="Username" class="col-xs-12 col-sm-12" type="text">
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Estimated Yield: </label>
+                                                <div class="col-sm-7">
+                                                    <input id="form-field-1"  placeholder="Username" ng-model="data.estimatedYield" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Estimated Yield: </label>
-                                                        <div class="col-sm-7">
-                                                            <input id="form-field-1"  ng-model="name" placeholder="Username" class="col-xs-12 col-sm-12" type="text">
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Sowing Date: </label>
+                                                <div class="col-sm-7">
+                                                    <input id="form-field-1" placeholder="Username" ng-model="data.startDate" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Seed Sowing Date: </label>
-                                                        <div class="col-sm-7">
-                                                            <input id="form-field-1" placeholder="Username" class="col-xs-12 col-sm-12" type="text">
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Next Stage Date: </label>
+                                                <div class="col-sm-7">
+                                                    <input id="form-field-1"  placeholder="Username" ng-model="data.nextStageDate" class="col-xs-12 col-sm-12" type="text">
                                                 </div>
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Next Stage Date: </label>
-                                                        <div class="col-sm-7">
-                                                            <input id="form-field-1"  ng-model="name" placeholder="Username" class="col-xs-12 col-sm-12" type="text">
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-12">
+                                            <div class="form-group">
+                                                <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Next Stage: </label>
+                                                <div class="col-sm-7">
+                                                    <select class="form-control" id="form-field-select-1" ng-model="data.selectStage" ng-options="stage for stage in growingStage">
+                                                       
+                                                    </select>
                                                 </div>
-                                                <div class="col-md-4 col-xs-12">
-                                                    <div class="form-group">
-                                                        <label class="col-sm-5 control-label no-padding-right" for="form-field-1"> Next Stage: </label>
-                                                        <div class="col-sm-7">
-                                                            <select class="form-control" id="form-field-select-1">
-                                                                <option value=""></option>
-                                                                <option value="AL">Alabama</option>
-                                                                <option value="AK">Alaska</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                            <div style="clear: both;">&nbsp;</div>
-                                            <div class="hr"></div>
-                                            <div class="widget-box transparent">
-                                                <div class="widget-header widget-header-flat">
-                                                    <h4 class="widget-title lighter">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div style="clear: both;">&nbsp;</div>
+                                    <div class="hr"></div>
+                                    <div class="widget-box transparent">
+                                        <div class="widget-header widget-header-flat">
+                                            <h4 class="widget-title lighter">
                                                     <i class="ace-icon fa fa-star orange"></i>
                                                     Feed
                                                     </h4>
-                                                    <div class="widget-toolbar">
-                                                        <a href="#" data-action="collapse">
+                                            <div class="widget-toolbar">
+                                                <a href="#" data-action="collapse">
                                                             <i class="ace-icon fa fa-chevron-up"></i>
                                                         </a>
-                                                    </div>
-                                                </div>
-                                                <div class="widget-body">
-                                                    <div class="widget-main no-padding">
-                                                        <table class="table table-bordered table-striped">
-                                                            <thead class="thin-border-bottom">
-                                                                <tr class="thead_bg">
-                                                                    <th>
-                                                                        <i class="ace-icon fa fa-caret-right blue"></i>Feed
-                                                                    </th>
-                                                                    <th>
-                                                                        <i class="ace-icon fa fa-caret-right blue"></i>Item
-                                                                    </th>
-                                                                    <th class="hidden-480">
-                                                                        <i class="ace-icon fa fa-caret-right blue"></i>Date of Dosage Provided
-                                                                    </th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <th class="td_heading">Water</th>
-                                                                    <td>
-                                                                        Normal Water
-                                                                    </td>
-                                                                    <td>
-                                                                        5 <div class="widget-toolbar no-border">
-                                                                            <div class="inline dropdown-hover">
-                                                                                <button class="btn btn-minier btn-primary">
-                                                                                Litres
-                                                                                <i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
-                                                                                    <li class="active">
-                                                                                        <a href="#" class="blue">
+                                            </div>
+                                        </div>
+                                        <div class="widget-body">
+                                            <div class="widget-main no-padding">
+                                                <table class="table table-bordered table-striped">
+                                                    <thead class="thin-border-bottom">
+                                                        <tr class="thead_bg">
+                                                            <th>
+                                                                <i class="ace-icon fa fa-caret-right blue"></i>Feed
+                                                            </th>
+                                                            <th>
+                                                                <i class="ace-icon fa fa-caret-right blue"></i>Item
+                                                            </th>
+                                                            <th class="hidden-480">
+                                                                <i class="ace-icon fa fa-caret-right blue"></i>Date of Dosage Provided
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="td_heading">Water</th>
+                                                            <td>
+                                                                Normal Water
+                                                            </td>
+                                                            <td>
+                                                                5
+                                                                <div class="widget-toolbar no-border">
+                                                                    <div class="inline dropdown-hover">
+                                                                        <button class="btn btn-minier btn-primary">
+                                                                            Litres
+                                                                            <i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
+                                                                            <li class="active">
+                                                                                <a href="#" class="blue">
                                                                                             <i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
                                                                                             Litres
                                                                                         </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="#">
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
                                                                                             <i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
                                                                                             Kilograms
                                                                                         </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class="td_heading">Nutrients</th>
-                                                                    <td>
-                                                                        XXX Type
-                                                                    </td>
-                                                                    <td>
-                                                                        15 <div class="widget-toolbar no-border">
-                                                                            <div class="inline dropdown-hover">
-                                                                                <button class="btn btn-minier btn-primary">
-                                                                                Grams
-                                                                                <i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
-                                                                                    <li class="active">
-                                                                                        <a href="#" class="blue">
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="td_heading">Nutrients</th>
+                                                            <td>
+                                                                XXX Type
+                                                            </td>
+                                                            <td>
+                                                                15
+                                                                <div class="widget-toolbar no-border">
+                                                                    <div class="inline dropdown-hover">
+                                                                        <button class="btn btn-minier btn-primary">
+                                                                            Grams
+                                                                            <i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
+                                                                            <li class="active">
+                                                                                <a href="#" class="blue">
                                                                                             <i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
                                                                                             Grams
                                                                                         </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="#">
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
                                                                                             <i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
                                                                                             Kilograms
                                                                                         </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class="td_heading">Fertiliser</th>
-                                                                    <td>
-                                                                        YYY Type
-                                                                    </td>
-                                                                    <td>
-                                                                        500 <div class="widget-toolbar no-border">
-                                                                            <div class="inline dropdown-hover">
-                                                                                <button class="btn btn-minier btn-primary">
-                                                                                Grams
-                                                                                <i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
-                                                                                </button>
-                                                                                <ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
-                                                                                    <li class="active">
-                                                                                        <a href="#" class="blue">
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="td_heading">Fertiliser</th>
+                                                            <td>
+                                                                YYY Type
+                                                            </td>
+                                                            <td>
+                                                                500
+                                                                <div class="widget-toolbar no-border">
+                                                                    <div class="inline dropdown-hover">
+                                                                        <button class="btn btn-minier btn-primary">
+                                                                            Grams
+                                                                            <i class="ace-icon fa fa-angle-down icon-on-right bigger-110"></i>
+                                                                        </button>
+                                                                        <ul class="dropdown-menu dropdown-menu-right dropdown-125 dropdown-lighter dropdown-close dropdown-caret">
+                                                                            <li class="active">
+                                                                                <a href="#" class="blue">
                                                                                             <i class="ace-icon fa fa-caret-right bigger-110">&nbsp;</i>
                                                                                             Grams
                                                                                         </a>
-                                                                                    </li>
-                                                                                    <li>
-                                                                                        <a href="#">
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">
                                                                                             <i class="ace-icon fa fa-caret-right bigger-110 invisible">&nbsp;</i>
                                                                                             Kilograms
                                                                                         </a>
-                                                                                    </li>
-                                                                                </ul>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class="td_heading">Soil</th>
-                                                                    <td>
-                                                                        HHH Soil
-                                                                    </td>
-                                                                    <td>
-                                                                        2 <div class="widget-toolbar no-border">
-                                                                            <div class="inline dropdown-hover">
-                                                                                <button class="btn btn-minier btn-primary">
-                                                                                Packet
-                                                                                </button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class="td_heading">Growing Medium</th>
-                                                                    <td>
-                                                                        AAA Growing Medium
-                                                                    </td>
-                                                                    <td>
-                                                                        1 <div class="widget-toolbar no-border">
-                                                                            <div class="inline dropdown-hover">
-                                                                                <button class="btn btn-minier btn-primary">
-                                                                                Packet
-                                                                                </button>
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th colspan="3">&nbsp;</th>
-                                                                </tr>
-                                                                <tr class="thead_bg">
-                                                                    <th><i class="ace-icon fa fa-caret-right blue"></i> Measure</th>
-                                                                    <td>
-                                                                        &nbsp;
-                                                                    </td>
-                                                                    <th>
-                                                                        <i class="ace-icon fa fa-caret-right blue"></i> Date of Measure
-                                                                    </th>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class="td_heading">Height</th>
-                                                                    <td>
-                                                                        in Inch or Centimeters
-                                                                    </td>
-                                                                    <td>
-                                                                        3 Inches
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class="td_heading">Photo</th>
-                                                                    <td colspan="2">
-                                                                        <div class="form-group">
-                                                                            <div class="col-xs-4" style="padding-left: 0px;">
-                                                                                <input type="file" id="id-input-file-2" />
-                                                                            </div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th class="td_heading">Defect</th>
-                                                                    <td>
-                                                                        Hermaphrodite Defect
-                                                                    </td>
-                                                                    <td>
-                                                                        <span class="red">Treated / Quarantined</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th colspan="3">&nbsp;</th>
-                                                                </tr>
-                                                                <tr class="thead_bg">
-                                                                    <th><i class="ace-icon fa fa-caret-right blue"></i> IoT</th>
-                                                                    <td>
-                                                                        &nbsp;
-                                                                    </td>
-                                                                    <th>
-                                                                        <i class="ace-icon fa fa-caret-right blue"></i> Date of Measure
-                                                                    </th>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Moisture (70%)</td>
-                                                                    <td>
-                                                                        CO2 - 0.05%
-                                                                    </td>
-                                                                    <td>
-                                                                        pH-7
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Temperature (23 C)</td>
-                                                                    <td>
-                                                                        Light - 300 Lumens
-                                                                    </td>
-                                                                    <td>
-                                                                        <span class="red">Alert</span>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                        </div><!-- /.widget-main -->
-                                                        </div><!-- /.widget-body -->
-                                                    </div>
-                                                </div>
-                                            </p>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="td_heading">Soil</th>
+                                                            <td>
+                                                                HHH Soil
+                                                            </td>
+                                                            <td>
+                                                                2
+                                                                <div class="widget-toolbar no-border">
+                                                                    <div class="inline dropdown-hover">
+                                                                        <button class="btn btn-minier btn-primary">
+                                                                            Packet
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="td_heading">Growing Medium</th>
+                                                            <td>
+                                                                AAA Growing Medium
+                                                            </td>
+                                                            <td>
+                                                                1
+                                                                <div class="widget-toolbar no-border">
+                                                                    <div class="inline dropdown-hover">
+                                                                        <button class="btn btn-minier btn-primary">
+                                                                            Packet
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th colspan="3">&nbsp;</th>
+                                                        </tr>
+                                                        <tr class="thead_bg">
+                                                            <th><i class="ace-icon fa fa-caret-right blue"></i> Measure</th>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                            <th>
+                                                                <i class="ace-icon fa fa-caret-right blue"></i> Date of Measure
+                                                            </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="td_heading">Height</th>
+                                                            <td>
+                                                                in Inch or Centimeters
+                                                            </td>
+                                                            <td>
+                                                                3 Inches
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="td_heading">Photo</th>
+                                                            <td colspan="2">
+                                                                <div class="form-group">
+                                                                    <div class="col-xs-4" style="padding-left: 0px;">
+                                                                        <input type="file" id="id-input-file-2" />
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="td_heading">Defect</th>
+                                                            <td>
+                                                                Hermaphrodite Defect
+                                                            </td>
+                                                            <td>
+                                                                <span class="red">Treated / Quarantined</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th colspan="3">&nbsp;</th>
+                                                        </tr>
+                                                        <tr class="thead_bg">
+                                                            <th><i class="ace-icon fa fa-caret-right blue"></i> IoT</th>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                            <th>
+                                                                <i class="ace-icon fa fa-caret-right blue"></i> Date of Measure
+                                                            </th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Moisture (70%)</td>
+                                                            <td>
+                                                                CO2 - 0.05%
+                                                            </td>
+                                                            <td>
+                                                                pH-7
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Temperature (23 C)</td>
+                                                            <td>
+                                                                Light - 300 Lumens
+                                                            </td>
+                                                            <td>
+                                                                <span class="red">Alert</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- /.widget-main -->
                                         </div>
-                                        <div id="profile44" class="tab-pane">
-                                            <p>
-                                                
-                                            </p>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="widget-box transparent">
-                                                        <div class="widget-header  widget-header-flat">
-                                                            <h4 class="widget-title lighter">
+                                        <!-- /.widget-body -->
+                                    </div>
+                                </div>
+                            </p>
+                        </div>
+                        <div id="profile44" class="tab-pane">
+                            <p>
+                            </p>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="widget-box transparent">
+                                        <div class="widget-header  widget-header-flat">
+                                            <h4 class="widget-title lighter">
                                                             <i class="ace-icon fa fa-star orange"></i>
                                                             Heading...
                                                             </h4>
-                                                            <div class="widget-toolbar">
-                                                                <a href="#" data-action="collapse">
+                                            <div class="widget-toolbar">
+                                                <a href="#" data-action="collapse">
                                                                     <i class="ace-icon fa fa-chevron-up"></i>
                                                                 </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="widget-body" style="display: block;">
-                                                            <div class="widget-main no-padding">
-                                                                <table class="table table-bordered table-striped">
-                                                                    <thead class="thin-border-bottom">
-                                                                        <tr>
-                                                                            <th>
-                                                                                <i class="ace-icon fa fa-caret-right blue"></i>Seed Id
-                                                                            </th>
-                                                                            <th>
-                                                                                <i class="ace-icon fa fa-caret-right blue"></i>Seed Name
-                                                                            </th>
-                                                                            <th>
-                                                                                <i class="ace-icon fa fa-caret-right blue"></i>Seed Source
-                                                                            </th>
-                                                                            <th class="hidden-480">
-                                                                                <i class="ace-icon fa fa-caret-right blue"></i>Status
-                                                                            </th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td>SID-0001</td>
-                                                                            <td>
-                                                                                <b class="green">Name 1</b>
-                                                                            </td>
-                                                                            <td>Source 1</td>
-                                                                            <td class="hidden-480">
-                                                                                <span class="label label-info arrowed-right arrowed-in">on sale</span>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>SID-0002</td>
-                                                                            <td>
-                                                                                <b class="blue">Name 2</b>
-                                                                            </td>
-                                                                            <td>Source 2</td>
-                                                                            <td class="hidden-480">
-                                                                                <span class="label label-success arrowed-in arrowed-in-right">approved</span>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>SID-0003</td>
-                                                                            <td>
-                                                                                <b class="blue">Name 3</b>
-                                                                            </td>
-                                                                            <td>Source 3</td>
-                                                                            <td class="hidden-480">
-                                                                                <span class="label label-danger arrowed">pending</span>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>SID-0004</td>
-                                                                            <td>
-                                                                                <b class="green">Name 4</b>
-                                                                            </td>
-                                                                            <td>Source 4</td>
-                                                                            <td class="hidden-480">
-                                                                                <span class="label arrowed">
-                                                                                    <s>out of stock</s>
-                                                                                </span>
-                                                                            </td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>SID-0005</td>
-                                                                            <td>
-                                                                                <b class="blue">Name 5</b>
-                                                                            </td>
-                                                                            <td>Source 5</td>
-                                                                            <td class="hidden-480">
-                                                                                <span class="label label-warning arrowed arrowed-right">SOLD</span>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                                </div><!-- /.widget-main -->
-                                                                </div><!-- /.widget-body -->
-                                                                </div><!-- /.widget-box -->
-                                                                </div><!-- /.col -->
-                                                                <div style="clear: both;">&nbsp;</div>
-                                                                <div class=" col-md-12 text-right">
-                                                                    <button class="btn btn-sm btn-primary">Export to Graph</button>
-                                                                    <button class="btn btn-sm btn-primary">Export to Excel</button>
-                                                                    <button class="btn btn-sm btn-primary">Send Email</button>
-                                                                </div>
-                                                            </div>
-                                                        </p>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
+                                        <div class="widget-body" style="display: block;">
+                                            <div class="widget-main no-padding">
+                                                <table class="table table-bordered table-striped">
+                                                    <thead class="thin-border-bottom">
+                                                        <tr>
+                                                            <th>
+                                                                <i class="ace-icon fa fa-caret-right blue"></i>Seed Id
+                                                            </th>
+                                                            <th>
+                                                                <i class="ace-icon fa fa-caret-right blue"></i>Seed Name
+                                                            </th>
+                                                            <th>
+                                                                <i class="ace-icon fa fa-caret-right blue"></i>Seed Source
+                                                            </th>
+                                                            <th class="hidden-480">
+                                                                <i class="ace-icon fa fa-caret-right blue"></i>Status
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>SID-0001</td>
+                                                            <td>
+                                                                <b class="green">Name 1</b>
+                                                            </td>
+                                                            <td>Source 1</td>
+                                                            <td class="hidden-480">
+                                                                <span class="label label-info arrowed-right arrowed-in">on sale</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>SID-0002</td>
+                                                            <td>
+                                                                <b class="blue">Name 2</b>
+                                                            </td>
+                                                            <td>Source 2</td>
+                                                            <td class="hidden-480">
+                                                                <span class="label label-success arrowed-in arrowed-in-right">approved</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>SID-0003</td>
+                                                            <td>
+                                                                <b class="blue">Name 3</b>
+                                                            </td>
+                                                            <td>Source 3</td>
+                                                            <td class="hidden-480">
+                                                                <span class="label label-danger arrowed">pending</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>SID-0004</td>
+                                                            <td>
+                                                                <b class="green">Name 4</b>
+                                                            </td>
+                                                            <td>Source 4</td>
+                                                            <td class="hidden-480">
+                                                                <span class="label arrowed">
+                                                                                    <s>out of stock</s>
+                                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>SID-0005</td>
+                                                            <td>
+                                                                <b class="blue">Name 5</b>
+                                                            </td>
+                                                            <td>Source 5</td>
+                                                            <td class="hidden-480">
+                                                                <span class="label label-warning arrowed arrowed-right">SOLD</span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- /.widget-main -->
+                                        </div>
+                                        <!-- /.widget-body -->
                                     </div>
+                                    <!-- /.widget-box -->
+                                </div>
+                                <!-- /.col -->
+                                <div style="clear: both;">&nbsp;</div>
+                                <div class=" col-md-12 text-right">
+                                    <button class="btn btn-sm btn-primary">Export to Graph</button>
+                                    <button class="btn btn-sm btn-primary">Export to Excel</button>
+                                    <button class="btn btn-sm btn-primary">Send Email</button>
                                 </div>
                             </div>
+                            </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

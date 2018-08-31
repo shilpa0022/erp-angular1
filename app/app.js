@@ -1,8 +1,6 @@
  var app = angular.module('myerp', ['ngRoute']);
 
-var baseURI = "http://54.190.192.25:8000/";
- 
-    app.config(function ($routeProvider) {
+   app.config(function ($routeProvider) {
         $routeProvider.
             when('/dashbord', 
                 {
